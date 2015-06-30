@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                display: flex;
+                background-color: white;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .bars {
+                font-family: sans-serif;
+                font-size: 10px;
+                width: 100px;
+                background-color: #efefef;
+                height: 100vh;
+                padding: 1.2rem;
+                overflow-y: auto;
+                white-space: nowrap;
+                overflow-x: hidden;
+                min-width: 200px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            progress[value] {
+                /* Reset the default appearance */
+                -webkit-appearance: none;
+                appearence: none;
+            }
+
+            canvas {
+                cursor: none !important;
+            }
+
+            #mainWrapper {
+                flex: 1;
+                height: 100vh;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            #shotWrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 50px;
+                font-size: 40px;
+            }
+
+            #progressWrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 44px;
+            }
+
+            #canvasWrapper {
+                display: flex;
+                flex: 1;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .circle {
+                width: 9px;
+                height: 9px;
+                border-radius: 5px;
+                border: 1px solid black;
+                float: left;
+                margin-right: 2px;
+                margin-top: 2px;
+            }
+
+            .big{
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+            }
+
+            .score{
+                font-size: 22px;
+                padding-left: 30px;
+            }
+        </style>
+    </head>
+    <body onload="main.init();">
+        <script src="vendor/sockjs.js"></script>
+        <script src="vendor/pixi/pixi.min.js"></script>
+        <script src="vendor/keyboard.js"></script>
+        <script src="js/rules.js"></script>
+        <script src="js/client-objects.js"></script>
+        <script src="js/client-interact.js"></script>
+        <script src="js/client-render.js"></script>
+        <script src="js/client-main.js"></script>
+
+        <div id="log" class="bars"></div>
+        <div id="mainWrapper">
+            <div id="progressWrapper">
+                <progress id="progress" value="100" max="100"></progress>
+            </div>
+            <div id="shotWrapper">
+                <div id="shots">4</div>
+            </div>
+            <div id="canvasWrapper">
+            </div>
+        </div>
+        <div id="stats" class="bars"></div>
+    </body>
+</html>

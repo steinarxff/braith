@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
+/*
+
+	Work in progress
+
+ */
+
 var FASTMAP = require("collections/fast-map"),
 	SOCKET = require("./server-socket.js"),
 	TIMER = require("./timer.js"),

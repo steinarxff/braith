@@ -1,3 +1,10 @@
+/*
+
+    Work in progress
+
+ */
+
+
 var main = function () {
     return {
         sockjs: false,
@@ -8,7 +15,7 @@ var main = function () {
         init: function () {
             var me = this;
             render.init();
-            me.sockjs = new SockJS('http://braith:9999/game');
+            me.sockjs = new SockJS('http://10.0.1.86:9999/game');
 
             me.sockjs.onopen = function () {
                 me.sockjs.send('hello');

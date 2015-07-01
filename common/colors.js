@@ -1,7 +1,47 @@
+/*
+
+	Player color assignment
+
+	There are 12, inspired by various Blizzard series,
+	available player colors. This "class" assigns colors
+	and keeps track of available ones.
+
+	Status: Probably needs some cleaning up before being set in stone
+
+	author: steinarxff
+
+ */
 var colors = function(){
 	return {
-		names: ['red','blue','teal','purple','yellow','orange','green','pink','lightblue','darkgreen','grey','brown'],
-		colors: ['f5003f','362dfe', '4ce7c2','560092','f7fa40','f78c43','3dc229','e055bc','87baed','226261','9796a6','502b2c'],
+		names: [
+			'red',
+			'blue',
+			'teal',
+			'purple',
+			'yellow',
+			'orange',
+			'green',
+			'pink',
+			'lightblue',
+			'darkgreen',
+			'grey',
+			'brown'
+		],
+		colors: [
+			'f5003f',
+			'362dfe',
+			'4ce7c2',
+			'560092',
+			'f7fa40',
+			'f78c43',
+			'3dc229',
+			'e055bc',
+			'87baed',
+			'226261',
+			'9796a6',
+			'502b2c'
+		],
+
 		available: [],
 
 		init: function(){

@@ -1,3 +1,15 @@
+/*
+
+    Timing
+
+    Just something to measure tick execution time, average over 50 and average over 1000.
+
+    Closely coupled to the terminal thing.
+
+    Status: Some cleaning up, mostly finished
+
+ */
+
 var _timer = function(){
 
 

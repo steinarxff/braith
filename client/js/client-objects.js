@@ -1,3 +1,10 @@
+/*
+
+    Work in progress
+
+ */
+
+
 Shot = function(obj){
     var me = this;
     me.id = obj.id;

@@ -1,3 +1,16 @@
+/*
+
+    Traffic measurement
+
+    Logs and measures traffic over the socket.
+
+    Closely coupled to the terminal thing.
+
+    Status: Some cleaning up, mostly finished
+
+
+ */
+
 var _traffic = function(){
 
     // http://buildnewgames.com/optimizing-websockets-bandwidth/
@@ -14,11 +27,10 @@ var _traffic = function(){
         return sizeInBytes;
     };
 
-    var units = ["B", "kB" , "MB", "TB"];
 
+    var units = ["B", "kB" , "MB", "TB"];
     var simplified = function(input){
-        var unit = units[0];
-        var i = 0;
+        var unit = units[0], i = 0;
         while (input > 1024 && ++i) {
             unit = units[i];
             input /= 1024;

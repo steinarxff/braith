@@ -1,3 +1,9 @@
+/*
+
+    Work in progress
+
+ */
+
 var uuid = require('node-uuid'),
     RULES = require('./rules.js'),
     Victor = require('victor');

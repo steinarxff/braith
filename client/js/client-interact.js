@@ -1,3 +1,9 @@
+/*
+
+    Keyboard mapping
+
+ */
+
 function keyboard(sockjs) {
     KeyboardJS.on('shift', function () {
         sockjs.send('+accelerate');

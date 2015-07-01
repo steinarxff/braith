@@ -1,3 +1,16 @@
+/*
+
+    Terminal
+
+    Used to draw ncurses-like windows with stats in the terminal.
+
+    -really- cool stuff this ncurses stuff. Makes you feel like 1990 all over again!
+
+    Status: Holy shitballs of crazy.
+
+ */
+
+
 var NCURSES = require("ncurses");
 
 var terminal = function() {
@@ -108,7 +121,7 @@ var terminal = function() {
             this.startUpdate(this.objectsWindow);
 
             this.objectsWindow.addstr(1,2, "Players: " + t.players);
-            this.objectsWindow.addstr(1,2, "Passive: " + t.passive);
+            this.objectsWindow.addstr(2,2, "Passive: " + t.passive);
 
             this.endUpdate(this.objectsWindow, "Objects");
         },

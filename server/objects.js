@@ -5,7 +5,7 @@
  */
 
 var uuid = require('node-uuid'),
-    RULES = require('./rules.js'),
+    RULES = require('../common/rules.js'),
     Victor = require('victor');
 
 function idGenerator(){

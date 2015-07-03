@@ -7,14 +7,14 @@
  */
 
 var FASTMAP = require("collections/fast-map"),
-	SOCKET = require("./server-socket.js"),
-	TIMER = require("./timer.js"),
-	RULES = require("./rules.js"),
-	COLORS = require("./colors.js"),
-	OBJECTS = require("./server-objects.js"),
-	TRAFFIC = require("./traffic.js"),
+	SOCKET = require("./socket.js"),
+	TIMER = require("../common/timer.js"),
+	RULES = require("../common/rules.js"),
+	COLORS = require("../common/colors.js"),
+	OBJECTS = require("./objects.js"),
+	TRAFFIC = require("../common/traffic.js"),
 	Victor = require('victor'),
-	TERMINAL = require('./server-terminal.js'),
+	TERMINAL = require('./terminal.js'),
 	Player = OBJECTS.Player,
 	Shot = OBJECTS.Shot;
 

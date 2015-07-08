@@ -9,7 +9,8 @@ A game under development, not really sure where it'll end =)
   https://github.com/broofa/node-uuid
 
 * Pixi.js - clientside rendering ( https://github.com/GoodBoyDigital/pixi.js/ )
-* SockJS - websocket communication ( https://github.com/sockjs )
+~~* SockJS - websocket communication ( https://github.com/sockjs )~~~
+* ws - websockets in Node.js ( https://github.com/websockets/ws )
 
 
 Plans

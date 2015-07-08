@@ -32,7 +32,7 @@ var __o = {
     SCREEN_BORDER: 4,
     PLAYER_SIZE: 10,
     DOT_SIZE: 2,
-    BULLET_SPEED: 9,
+    BULLET_SPEED: 14,
     BULLET_SIZE: 4,
     BULLET_AGE: 150,
     SHOTFUEL_MAX: 100,

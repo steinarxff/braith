@@ -4,40 +4,40 @@
 
  */
 
-function keyboard(sockjs) {
+function keyboard(websocket) {
     KeyboardJS.on('shift', function () {
-        sockjs.send('+accelerate');
+        websocket.send('+accelerate');
     }, function () {
-        sockjs.send('-accelerate');
+        websocket.send('-accelerate');
     });
 
     KeyboardJS.on('space', function () {
-        sockjs.send('+stop');
+        websocket.send('+stop');
     }, function () {
-        sockjs.send('-stop');
+        websocket.send('-stop');
     });
 
     KeyboardJS.on('a', function () {
-        sockjs.send('+left');
+        websocket.send('+left');
     }, function () {
-        sockjs.send('-left');
+        websocket.send('-left');
     });
 
     KeyboardJS.on('d', function () {
-        sockjs.send('+right');
+        websocket.send('+right');
     }, function () {
-        sockjs.send('-right');
+        websocket.send('-right');
     });
 
     KeyboardJS.on('w', function () {
-        sockjs.send('+up');
+        websocket.send('+up');
     }, function () {
-        sockjs.send('-up');
+        websocket.send('-up');
     });
 
     KeyboardJS.on('s', function () {
-        sockjs.send('+down');
+        websocket.send('+down');
     }, function () {
-        sockjs.send('-down');
+        websocket.send('-down');
     });
 }

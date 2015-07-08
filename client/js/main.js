@@ -7,7 +7,7 @@
 
 var main = function () {
     return {
-        sockjs: false,
+        websocket: false,
         lastShot: 0,
         objects: [],
         lookup: [],
@@ -15,15 +15,15 @@ var main = function () {
         init: function () {
             var me = this;
             render.init();
-            me.sockjs = new SockJS('http://10.0.1.86:9999/game');
-
-            me.sockjs.onopen = function () {
-                me.sockjs.send('hello');
+            var host = window.document.location.host.replace(/:.*/, '');
+            me.websocket = new WebSocket('ws://' + host + ':9999');
+            me.websocket.onopen = function () {
+                me.websocket.send('hello');
             };
 
-            me.sockjs.onmessage = me.onMessage.bind(me);
-            me.sockjs.onclose = me.onClose.bind(me);
-            keyboard(me.sockjs);
+            me.websocket.onmessage = me.onMessage.bind(me);
+            me.websocket.onclose = me.onClose.bind(me);
+            keyboard(me.websocket);
             me.setupShot();
         },
 
@@ -33,7 +33,7 @@ var main = function () {
             render.stage.on('mousedown', function (event) {
                 if (((new Date()).getTime() - me.lastShot) > 100) {
                     var pos = event.data.getLocalPosition(render.stage);
-                    me.sockjs.send('+shot:' + (pos.x - (RULES.SCREEN_WIDTH / 2)) + ":" + (pos.y - (RULES.SCREEN_HEIGHT / 2)));
+                    me.websocket.send('+shot:' + (pos.x - (RULES.SCREEN_WIDTH / 2)) + ":" + (pos.y - (RULES.SCREEN_HEIGHT / 2)));
                     me.lastShot = (new Date()).getTime();
                 }
             });

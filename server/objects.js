@@ -114,7 +114,7 @@ Player = function(conn, engine){
 	me.ip = conn.remoteAddress;
 	me.conn = conn;
 
-    me.conn.on('data', me._read.bind(me));
+    me.conn.on('message', me._read.bind(me));
 
     me.conn.on('close', function(){
         me.engine.colors.freeColor(me.color.name);
@@ -164,7 +164,7 @@ Player.prototype = {
         });
 
         if(this.previous != k){
-            this.conn.write(k);
+            this.conn.send(k);
             this.previous = k;
             return k;
         }

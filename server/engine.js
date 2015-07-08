@@ -23,13 +23,13 @@ var engine = function(){
     return {
     	passive: new FASTMAP(),
     	active: new FASTMAP(),
-    	sockjs: SOCKET,
+    	websocket: SOCKET,
     	colors: COLORS,
 		winRedraw: 50,
 
     	init: function(){
     		var me = this;
-    		me.sockjs.on('connection', me.onConnect.bind(me));
+    		me.websocket.on('connection', me.onConnect.bind(me));
     		me.tickThrough = me._tickThrough.bind(me);
 
     		setInterval(me.tick.bind(me), RULES.ENGINE_TICK);
@@ -69,11 +69,8 @@ var engine = function(){
 
     	tick: function(){
 			TIMER.measureStart();
-
     		this.broadcast("state",[].concat(this.tickThrough(this.active)).concat(this.tickThrough(this.passive)));
-
 			this.crashTest();
-
 			TIMER.measureStop();
     	},
 

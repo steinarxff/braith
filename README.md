@@ -9,7 +9,6 @@ A game under development, not really sure where it'll end =)
   https://github.com/broofa/node-uuid
 
 * Pixi.js - clientside rendering ( https://github.com/GoodBoyDigital/pixi.js/ )
-~~* SockJS - websocket communication ( https://github.com/sockjs )~~~
 * ws - websockets in Node.js ( https://github.com/websockets/ws )
 
 
@@ -18,3 +17,6 @@ Plans
 - Implement power-ups
 - Implement maps
 - Further development
+
+Update July 8
+- Removed SockJS in favor of standard ws. Because binary and no need for fallbacks.
